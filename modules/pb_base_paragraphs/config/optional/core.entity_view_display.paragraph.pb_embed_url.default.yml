@@ -1,0 +1,36 @@
+uuid: 30897fa9-1e63-414e-bd3d-90658b4e74de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pb_embed_url.field_pb_label
+    - field.field.paragraph.pb_embed_url.field_pb_link_target
+    - paragraphs.paragraphs_type.pb_embed_url
+  module:
+    - link
+id: paragraph.pb_embed_url.default
+targetEntityType: paragraph
+bundle: pb_embed_url
+mode: default
+content:
+  field_pb_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pb_link_target:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

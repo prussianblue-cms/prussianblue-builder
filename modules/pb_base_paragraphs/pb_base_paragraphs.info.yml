@@ -1,0 +1,18 @@
+name: 'PrussianBlue Base Paragraphs'
+type: module
+description: 'Provides configuration for the base paragraphs and their fields.'
+core: 9.x
+core_version_requirement: ^9 || ^10
+
+# In practice, this block has no effect since
+# the module will be treated as a dev dependency
+# and thus will be uninstalled after the site
+# is built.
+# The declaration of dependencies serves only
+# as documentation.
+dependencies:
+  - paragraphs
+  - layout_paragraphs
+  - url_embed
+  - media
+  - content_translation

@@ -1,0 +1,33 @@
+uuid: d6b5dea5-170c-48b5-9940-2381032e8f2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pb_logo_strip.field_pb_logo_strip_style
+    - field.field.paragraph.pb_logo_strip.field_pb_logos
+    - paragraphs.paragraphs_type.pb_logo_strip
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.pb_logo_strip.default
+targetEntityType: paragraph
+bundle: pb_logo_strip
+mode: default
+content:
+  field_pb_logo_strip_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pb_logos:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

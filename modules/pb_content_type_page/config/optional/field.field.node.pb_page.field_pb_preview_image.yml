@@ -1,0 +1,29 @@
+uuid: 071a34bb-6f6a-470b-a4ef-3a8334fc00ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pb_preview_image
+    - media.type.image
+    - node.type.pb_page
+id: node.pb_page.field_pb_preview_image
+field_name: field_pb_preview_image
+entity_type: node
+bundle: pb_page
+label: 'Preview Image'
+description: '<p>This image is shown when the page is displayed as a card or teaser. This happens when linking to another page as related page and in content lists, for example.</p>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

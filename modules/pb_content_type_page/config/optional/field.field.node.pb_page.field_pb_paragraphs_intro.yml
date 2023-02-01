@@ -1,0 +1,47 @@
+uuid: 71a7e1ba-ed72-4844-89c4-8b1926e29ba7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pb_paragraphs_intro
+    - node.type.pb_page
+  module:
+    - entity_reference_revisions
+id: node.pb_page.field_pb_paragraphs_intro
+field_name: field_pb_paragraphs_intro
+entity_type: node
+bundle: pb_page
+label: Introduction
+description: "<p>The introduction is very similar to the main Content of the page, with two differences:</p>\r\n<ul>\r\n<li>It is displayed <em>before</em> the table of contents.</li>\r\n<li>It can't contain headings, so it doesn't add to the table of contents.</li>\r\n</ul>\r\n<p>It's meant to be a brief fragment of content that presents the page, and it's not mandatory.</p>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      content_embed_freeform:
+        weight: 8
+        enabled: false
+      freeform_content_canvas:
+        weight: 9
+        enabled: false
+      freeform_formatted_text:
+        weight: 10
+        enabled: false
+      freeform_image:
+        weight: 11
+        enabled: false
+      freeform_plain_text:
+        weight: 12
+        enabled: false
+      freeform_url:
+        weight: 13
+        enabled: false
+      pb_rich_text:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

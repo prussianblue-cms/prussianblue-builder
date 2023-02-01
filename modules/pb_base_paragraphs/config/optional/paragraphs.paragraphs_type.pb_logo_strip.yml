@@ -1,0 +1,12 @@
+uuid: ad9ca533-a372-40a8-97a9-3ec315046e46
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:97955b7e-e8c0-4568-85b7-7d6b0b6aaff0'
+id: pb_logo_strip
+label: 'Logo Strip'
+icon_uuid: 97955b7e-e8c0-4568-85b7-7d6b0b6aaff0
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48ZyBpZD0iY2FycnVzZWwiPjxyZWN0IHg9IjMyLjkzIiB5PSI3OC4zOCIgd2lkdGg9IjM1LjEiIGhlaWdodD0iMzUuMSIgcng9IjE3LjU1Ii8+PHJlY3QgeD0iNzkuNDQiIHk9Ijc5LjQxIiB3aWR0aD0iMzMuMDMiIGhlaWdodD0iMzMuMDMiIHJ4PSI0LjY5Ii8+PHBhdGggZD0iTTEyNS4zMSwxMTIuNDRoMzEuMmExLjIsMS4yLDAsMCwwLDEuMDctMS43NEwxNDIsNzkuNWExLjIsMS4yLDAsMCwwLTIuMTUsMGwtMTUuNiwzMS4yQTEuMiwxLjIsMCwwLDAsMTI1LjMxLDExMi40NFoiLz48cG9seWdvbiBwb2ludHM9IjE3NS4xMyAxMDcuMzQgMTcxLjY5IDEwMy45NyAxNzkuNDEgOTYuMSAxNzEuNTIgODguMDYgMTc0Ljk2IDg0LjY4IDE4Ni4xNiA5Ni4xIDE3NS4xMyAxMDcuMzQiLz48cG9seWdvbiBwb2ludHM9IjE2Ljg3IDEwNy4zNCA1Ljg0IDk2LjEgMTcuMDQgODQuNjggMjAuNDggODguMDYgMTIuNTkgOTYuMSAyMC4zMSAxMDMuOTcgMTYuODcgMTA3LjM0Ii8+PC9nPjwvc3ZnPg=='
+description: '<p>Shows a group of logos as a grid or a scrollable strip.</p>'
+behavior_plugins: {  }

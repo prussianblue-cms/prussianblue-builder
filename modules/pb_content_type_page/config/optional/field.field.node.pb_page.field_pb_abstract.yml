@@ -1,0 +1,19 @@
+uuid: ba51b0e6-5333-4fef-8bfb-299987ce13fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pb_abstract
+    - node.type.pb_page
+id: node.pb_page.field_pb_abstract
+field_name: field_pb_abstract
+entity_type: node
+bundle: pb_page
+label: Abstract
+description: 'The abstract is shown when the page is displayed as a card or teaser. This happens when linking to another page as related page and in content lists, for example.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

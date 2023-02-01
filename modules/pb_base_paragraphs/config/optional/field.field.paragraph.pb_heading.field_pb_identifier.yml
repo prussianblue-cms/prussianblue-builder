@@ -1,0 +1,19 @@
+uuid: 6a92879a-d267-434c-b8eb-3f7350edc11a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_identifier
+    - paragraphs.paragraphs_type.pb_heading
+id: paragraph.pb_heading.field_pb_identifier
+field_name: field_pb_identifier
+entity_type: paragraph
+bundle: pb_heading
+label: Identifier
+description: "<p>This is not shown to the user. Drupal will use the identifier to recognize the item in the table of contents and the heading in the page as related, linking them together.</p>\r\n<p><strong>Use only letters and dashes.</strong>"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

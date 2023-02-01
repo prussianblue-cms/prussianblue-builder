@@ -1,0 +1,18 @@
+uuid: c6ad1ccc-a2e0-4f2d-975f-776b289a3d4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.pb_embed_url
+id: paragraph.pb_embed_url.created
+field_name: created
+entity_type: paragraph
+bundle: pb_embed_url
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

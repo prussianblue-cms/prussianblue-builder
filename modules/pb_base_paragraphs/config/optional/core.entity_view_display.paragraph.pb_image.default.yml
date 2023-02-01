@@ -1,0 +1,31 @@
+uuid: dd55f997-9a73-47aa-83d2-5211e9260101
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pb_image.field_pb_alt_text
+    - field.field.paragraph.pb_image.field_pb_image
+    - paragraphs.paragraphs_type.pb_image
+id: paragraph.pb_image.default
+targetEntityType: paragraph
+bundle: pb_image
+mode: default
+content:
+  field_pb_alt_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pb_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

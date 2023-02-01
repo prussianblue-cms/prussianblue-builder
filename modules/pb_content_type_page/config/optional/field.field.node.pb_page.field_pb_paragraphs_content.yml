@@ -1,0 +1,47 @@
+uuid: ea967026-4847-4e9a-8e3b-9d751f66fc87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pb_paragraphs_content
+    - node.type.pb_page
+  module:
+    - entity_reference_revisions
+id: node.pb_page.field_pb_paragraphs_content
+field_name: field_pb_paragraphs_content
+entity_type: node
+bundle: pb_page
+label: Content
+description: "<p>This is the main content of your page. It's shown after the intro and table of contents (if present) and it's built with layouts that contain paragraphs inside them.</p>\r\n<p>The page's table of contents is built from the content in this field. To add an item to the TOC, create a <em>Heading</em> paragraph, and it will automatically be added.</p>"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      content_embed_freeform:
+        weight: 8
+        enabled: false
+      freeform_content_canvas:
+        weight: 9
+        enabled: false
+      freeform_formatted_text:
+        weight: 10
+        enabled: false
+      freeform_image:
+        weight: 11
+        enabled: false
+      freeform_plain_text:
+        weight: 12
+        enabled: false
+      freeform_url:
+        weight: 13
+        enabled: false
+      pb_rich_text:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

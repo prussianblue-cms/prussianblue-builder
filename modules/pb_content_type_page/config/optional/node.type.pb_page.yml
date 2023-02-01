@@ -1,0 +1,17 @@
+uuid: 8dabb229-599c-444d-a096-a243ca08fc49
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Page
+type: pb_page
+description: 'Create an informative page with flexible layout and various components.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

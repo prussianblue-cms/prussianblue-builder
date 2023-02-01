@@ -1,0 +1,32 @@
+uuid: 1aa0ed8c-9536-4c9a-a522-0cd5710746e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pb_heading.field_pb_identifier
+    - field.field.paragraph.pb_heading.field_pb_title
+    - paragraphs.paragraphs_type.pb_heading
+id: paragraph.pb_heading.default
+targetEntityType: paragraph
+bundle: pb_heading
+mode: default
+content:
+  field_pb_identifier:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_pb_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,23 @@
+uuid: e350fb9b-3ef5-4f77-9d23-716442509b23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_card_style
+    - paragraphs.paragraphs_type.pb_card_with_link
+  module:
+    - options
+id: paragraph.pb_card_with_link.field_pb_card_style
+field_name: field_pb_card_style
+entity_type: paragraph
+bundle: pb_card_with_link
+label: Style
+description: "<p>Your selection will determine how the card looks, and also what fields are relevant for you to fill to make it look great.</p>\r\n<ul>\r\n  <li><em>Minimal</em>: only the title.</li>\r\n  <li><em>Small</em>: the title and preview image.</li>\r\n  <li><em>Full</em>: title, preview image and abstract, in vertical format\r\n  <li><em>Full Horizontal</em>: title, preview image and abstract, in horizontal, larger format.</li>\r\n</ul>"
+required: false
+translatable: false
+default_value:
+  -
+    value: full
+default_value_callback: ''
+settings: {  }
+field_type: list_string

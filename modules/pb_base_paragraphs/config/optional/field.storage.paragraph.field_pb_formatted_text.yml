@@ -1,0 +1,19 @@
+uuid: 30087858-cc4c-422a-9783-e17e78b82a6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_pb_formatted_text
+field_name: field_pb_formatted_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 2d874fc0-82cc-438b-865d-5bb4140d9c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.pb_rich_text
+id: paragraph.pb_rich_text.status
+field_name: status
+entity_type: paragraph
+bundle: pb_rich_text
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

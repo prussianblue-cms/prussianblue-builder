@@ -1,0 +1,18 @@
+uuid: d2f5c4f3-d122-4ed4-b634-d937fdb5dc94
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.pb_rich_text
+id: paragraph.pb_rich_text.created
+field_name: created
+entity_type: paragraph
+bundle: pb_rich_text
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

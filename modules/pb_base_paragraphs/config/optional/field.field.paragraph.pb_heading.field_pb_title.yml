@@ -1,0 +1,19 @@
+uuid: c18c7fa6-271e-43e7-92f0-86511ce1a7bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_title
+    - paragraphs.paragraphs_type.pb_heading
+id: paragraph.pb_heading.field_pb_title
+field_name: field_pb_title
+entity_type: paragraph
+bundle: pb_heading
+label: Text
+description: '<p>This is the text that will be displayed both in the table of contents, and in the body of the content.</p>'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+uuid: a85c4720-1e3f-4556-8377-616461623d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_logos
+    - paragraphs.paragraphs_type.pb_image
+    - paragraphs.paragraphs_type.pb_logo_strip
+  module:
+    - entity_reference_revisions
+id: paragraph.pb_logo_strip.field_pb_logos
+field_name: field_pb_logos
+entity_type: paragraph
+bundle: pb_logo_strip
+label: Logos
+description: '<p>The logo images to be displayed. Make sure that the images have similar dimensions. All the images will be shown at the same <em>height</em> so make sure that the size of the logo relative to the height is similar in the group, and make sure that the whitespace around the logo is similar too.</p>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      pb_image: pb_image
+    negate: 0
+    target_bundles_drag_drop:
+      pb_image:
+        weight: 23
+        enabled: true
+field_type: entity_reference_revisions

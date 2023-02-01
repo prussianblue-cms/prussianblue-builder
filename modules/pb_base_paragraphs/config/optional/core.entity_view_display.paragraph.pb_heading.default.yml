@@ -1,0 +1,30 @@
+uuid: c1806090-e576-4ce3-9a03-42dff41aa0cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pb_heading.field_pb_identifier
+    - field.field.paragraph.pb_heading.field_pb_title
+    - paragraphs.paragraphs_type.pb_heading
+id: paragraph.pb_heading.default
+targetEntityType: paragraph
+bundle: pb_heading
+mode: default
+content:
+  field_pb_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_pb_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

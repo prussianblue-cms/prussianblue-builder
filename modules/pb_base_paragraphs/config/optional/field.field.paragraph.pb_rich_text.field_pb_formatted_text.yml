@@ -1,0 +1,21 @@
+uuid: 67660f4c-6514-41c4-80bc-589bf6659d83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_formatted_text
+    - paragraphs.paragraphs_type.pb_rich_text
+  module:
+    - text
+id: paragraph.pb_rich_text.field_pb_formatted_text
+field_name: field_pb_formatted_text
+entity_type: paragraph
+bundle: pb_rich_text
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

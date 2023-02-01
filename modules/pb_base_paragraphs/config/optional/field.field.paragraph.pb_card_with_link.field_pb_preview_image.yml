@@ -1,0 +1,29 @@
+uuid: bc01f721-8c11-4148-8684-7073e7dfe920
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_preview_image
+    - media.type.image
+    - paragraphs.paragraphs_type.pb_card_with_link
+id: paragraph.pb_card_with_link.field_pb_preview_image
+field_name: field_pb_preview_image
+entity_type: paragraph
+bundle: pb_card_with_link
+label: 'Preview Image'
+description: '<p>This is the image that will be shown on the card.</p>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

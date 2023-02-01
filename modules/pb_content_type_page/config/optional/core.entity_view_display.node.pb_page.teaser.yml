@@ -1,0 +1,31 @@
+uuid: a09badc3-0109-4e92-88c7-90b0f088cc0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pb_page.field_pb_abstract
+    - field.field.node.pb_page.field_pb_meta_tags
+    - field.field.node.pb_page.field_pb_paragraphs_content
+    - field.field.node.pb_page.field_pb_paragraphs_intro
+    - field.field.node.pb_page.field_pb_preview_image
+    - node.type.pb_page
+  module:
+    - user
+id: node.pb_page.teaser
+targetEntityType: node
+bundle: pb_page
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_pb_abstract: true
+  field_pb_meta_tags: true
+  field_pb_paragraphs_content: true
+  field_pb_paragraphs_intro: true
+  field_pb_preview_image: true
+  langcode: true

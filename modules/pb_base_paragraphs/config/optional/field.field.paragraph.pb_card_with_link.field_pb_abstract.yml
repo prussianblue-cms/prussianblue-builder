@@ -1,0 +1,19 @@
+uuid: 0615f218-e4d3-426e-98b9-3c64819f7334
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_abstract
+    - paragraphs.paragraphs_type.pb_card_with_link
+id: paragraph.pb_card_with_link.field_pb_abstract
+field_name: field_pb_abstract
+entity_type: paragraph
+bundle: pb_card_with_link
+label: Abstract
+description: '<p>The brief text that is shown in the card.</p>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

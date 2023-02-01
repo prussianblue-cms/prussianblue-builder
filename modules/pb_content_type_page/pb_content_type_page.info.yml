@@ -1,0 +1,12 @@
+name: 'PrussianBlue Content Type: Page'
+type: module
+description: 'Provides configuration for the page content type.'
+core: 9.x
+core_version_requirement: ^9 || ^10
+
+dependencies:
+  - node
+  - paragraphs
+  - layout_paragraphs
+  - content_translation
+  - pb_base_paragraphs

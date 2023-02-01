@@ -1,0 +1,22 @@
+uuid: f49eb3f2-52f1-44ff-8f1b-227fec807eaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pb_rich_text.field_pb_formatted_text
+    - paragraphs.paragraphs_type.pb_rich_text
+  module:
+    - text
+id: paragraph.pb_rich_text.default
+targetEntityType: paragraph
+bundle: pb_rich_text
+mode: default
+content:
+  field_pb_formatted_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

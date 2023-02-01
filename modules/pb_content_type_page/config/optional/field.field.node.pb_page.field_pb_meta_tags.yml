@@ -1,0 +1,21 @@
+uuid: 889cd9c5-aa16-469b-96bf-d75820a8023c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pb_meta_tags
+    - node.type.pb_page
+  module:
+    - metatag
+id: node.pb_page.field_pb_meta_tags
+field_name: field_pb_meta_tags
+entity_type: node
+bundle: pb_page
+label: 'Meta tags'
+description: '<p>Meta tags allow you to provide information for search engines, social media sites and other platforms that consume your content. Good use of meta tags can help your content stand out and look better when shared or found online.</p>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

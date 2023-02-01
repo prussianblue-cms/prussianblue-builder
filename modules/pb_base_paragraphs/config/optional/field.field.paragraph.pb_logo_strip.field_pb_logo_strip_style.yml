@@ -1,0 +1,23 @@
+uuid: 043c75ff-a8df-4654-a79f-ef5f728133f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_logo_strip_style
+    - paragraphs.paragraphs_type.pb_logo_strip
+  module:
+    - options
+id: paragraph.pb_logo_strip.field_pb_logo_strip_style
+field_name: field_pb_logo_strip_style
+entity_type: paragraph
+bundle: pb_logo_strip
+label: Style
+description: '<p>The apearance of the logo strip will change depending on your selection. <em>Grid</em> will let them span more than one row if needed; <em>Strip</em> will create an horizonal scroll behavior.</p>'
+required: true
+translatable: false
+default_value:
+  -
+    value: grid
+default_value_callback: ''
+settings: {  }
+field_type: list_string

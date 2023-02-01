@@ -1,0 +1,12 @@
+uuid: cdef84c9-4c02-41f9-8d55-f563fbbfa1ec
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:c2cfb9a1-efe8-475b-bfcb-a8202cdd18fc'
+id: pb_video
+label: Video
+icon_uuid: c2cfb9a1-efe8-475b-bfcb-a8202cdd18fc
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48ZyBpZD0idmlkZW9fY29weSIgZGF0YS1uYW1lPSJ2aWRlbyBjb3B5Ij48cGF0aCBkPSJNOTYuMSwxNjYuNDlhNjguMjMsNjguMjMsMCwxLDEsNjguMjMtNjguMjNBNjguMzEsNjguMzEsMCwwLDEsOTYuMSwxNjYuNDlabTAtMTI4Ljg3YTYwLjY1LDYwLjY1LDAsMSwwLDYwLjY1LDYwLjY0QTYwLjcyLDYwLjcyLDAsMCwwLDk2LjEsMzcuNjJaIi8+PHBhdGggZD0iTTc4LjE0LDY4Ljk0djU4LjY0YTQuNzQsNC43NCwwLDAsMCw3LjM3LDRsNDMuNTgtMjkuMzJhNC44LDQuOCwwLDAsMCwwLThMODUuNTEsNjVBNC43NCw0Ljc0LDAsMCwwLDc4LjE0LDY4Ljk0WiIvPjwvZz48L3N2Zz4='
+description: ''
+behavior_plugins: {  }

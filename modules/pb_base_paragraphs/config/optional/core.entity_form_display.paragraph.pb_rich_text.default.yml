@@ -1,0 +1,25 @@
+uuid: 27dcba0d-87ad-4674-95d5-f05555263f7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pb_rich_text.field_pb_formatted_text
+    - paragraphs.paragraphs_type.pb_rich_text
+  module:
+    - text
+id: paragraph.pb_rich_text.default
+targetEntityType: paragraph
+bundle: pb_rich_text
+mode: default
+content:
+  field_pb_formatted_text:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,19 @@
+uuid: d5608760-fbbc-439e-b674-a1e15c9ab73a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_alt_text
+    - paragraphs.paragraphs_type.pb_image
+id: paragraph.pb_image.field_pb_alt_text
+field_name: field_pb_alt_text
+entity_type: paragraph
+bundle: pb_image
+label: 'Alternative Text'
+description: "<p>The alt provides fallback (alternate) text to display when the image specified by the <img> element is not loaded.</p>\r\n<p>This may be the case because of an error, because the user has disabled the loading of images, or because the image hasn't finished loading yet.</p>\r\n<p>Perhaps the most important reason to use the alt property is to support <strong>accessibility</strong>, as the alt text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content. It will be read aloud or sent to the touch device, for example, to support visually impaired users.</p>\r\n<p><em>(taken from the Mozilla MDN site)</em></p>"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

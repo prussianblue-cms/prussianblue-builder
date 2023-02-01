@@ -1,0 +1,23 @@
+uuid: a46f854a-beca-4ee3-a8db-790b6069b21b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pb_link_target
+    - paragraphs.paragraphs_type.pb_card_with_link
+  module:
+    - link
+id: paragraph.pb_card_with_link.field_pb_link_target
+field_name: field_pb_link_target
+entity_type: paragraph
+bundle: pb_card_with_link
+label: Target
+description: "<p>The target where you want the link to point.</p>\r\n<p><strong>WARNING!</strong> Only use https://... links if you are pointing to an external site. If you want to link a page in your site, make sure to use an internal link. Do this by using the autocomplete feature to search for the title of the content you want to point to.</p>\r\n<p>Why? Because if the domain for your site changes (say, from preview.name.org to www.name.org), the links would break if you use absolute URLs but they will work just fine if you let Drupal figure out the correct target.</p>"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

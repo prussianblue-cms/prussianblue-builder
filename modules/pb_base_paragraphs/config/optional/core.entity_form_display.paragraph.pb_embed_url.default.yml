@@ -1,0 +1,34 @@
+uuid: 14fd14e1-5e02-44a1-a22d-96b54b7506ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pb_embed_url.field_pb_label
+    - field.field.paragraph.pb_embed_url.field_pb_link_target
+    - paragraphs.paragraphs_type.pb_embed_url
+  module:
+    - link
+id: paragraph.pb_embed_url.default
+targetEntityType: paragraph
+bundle: pb_embed_url
+mode: default
+content:
+  field_pb_label:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_pb_link_target:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
