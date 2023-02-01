@@ -1,0 +1,12 @@
+{
+  "name": "prussianblue-cms/prussianblue_builder",
+  "description": "The PrussianBlue builder is a set of modules that provide configuration recipes and Drush commands that help developers set up a site reliably and quickly.",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+      {
+          "name": "Noel Rivas",
+          "role": ""
+      }
+  ]
+}
