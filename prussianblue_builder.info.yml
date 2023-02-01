@@ -1,0 +1,9 @@
+name: 'PrussianBlue Builder'
+type: module
+description: 'The PrussianBlue builder is a set of modules that provide configuration recipes and Drush commands that help developers set up a site reliably and quickly.'
+core: 9.x
+core_version_requirement: ^9 || ^10
+
+dependencies:
+  # This module should never have dependencies.
+  # It's meant to be used as a dev dependency only.
