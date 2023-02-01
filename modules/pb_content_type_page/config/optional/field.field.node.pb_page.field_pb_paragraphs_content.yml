@@ -22,25 +22,4 @@ settings:
     target_bundles: null
     negate: 0
     target_bundles_drag_drop:
-      content_embed_freeform:
-        weight: 8
-        enabled: false
-      freeform_content_canvas:
-        weight: 9
-        enabled: false
-      freeform_formatted_text:
-        weight: 10
-        enabled: false
-      freeform_image:
-        weight: 11
-        enabled: false
-      freeform_plain_text:
-        weight: 12
-        enabled: false
-      freeform_url:
-        weight: 13
-        enabled: false
-      pb_rich_text:
-        weight: 14
-        enabled: false
 field_type: entity_reference_revisions
