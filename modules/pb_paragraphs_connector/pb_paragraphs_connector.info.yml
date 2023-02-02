@@ -1,0 +1,5 @@
+name: 'PrussianBlue Paragraph Connector'
+type: module
+description: 'Provides a module to connect PrussianBlue content type fields to the paragraphs they want to receive'
+core: 9.x
+core_version_requirement: ^9 || ^10

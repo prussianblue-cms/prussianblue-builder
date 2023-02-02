@@ -1,2 +1,22 @@
 <?php
 
+function pb_content_type_page_discover_paragraph_recipients(&$paragraph_recipients) {
+  $paragraph_recipients['pb_page'] = [
+    'field_pb_paragraphs_content' => [
+      'pb_card_with_link',
+      'pb_embed_url',
+      'pb_heading',
+      'pb_image',
+      'pb_logo_strip',
+      'pb_rich_text',
+      'pb_video',
+    ],
+    'field_pb_paragraphs_intro' => [
+      'pb_card_with_link',
+      'pb_image',
+      'pb_logo_strip',
+      'pb_rich_text',
+      'pb_video',
+    ]
+  ];
+}

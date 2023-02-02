@@ -1,0 +1,5 @@
+services:
+  pb_paragraphs_connector.commands:
+    class: \Drupal\pb_paragraphs_connector\Commands\ParagraphsConnectorCommands
+    tags:
+      - { name: drush.command }
