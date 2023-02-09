@@ -87,11 +87,12 @@ class ParagraphsHelper {
    */
   public static function createImageParagraphFromMediaEntity($region, $parent_uuid, $media_image) {
     $random = new Random();
-    $paragraph = static::createBaseParagraph('content_embed_image', $region, $parent_uuid);
+    $paragraph = static::createBaseParagraph('pb_image', $region, $parent_uuid);
 
-    $paragraph->set('field_embed_image', $media_image->id());
-    $paragraph->set('field_optional_link', 'http://www.matrushka.com.mx');
-    $paragraph->set('field_image_alt', $random->sentences(4));
+    $paragraph->set('field_pb_image', $media_image->id());
+    // TODO: populate the link target field
+    // $paragraph->set('field_pb_link_target', 'http://www.matrushka.com.mx');
+    $paragraph->set('field_pb_alt_text', $random->sentences(4));
     $paragraph->save();
 
     return $paragraph;
