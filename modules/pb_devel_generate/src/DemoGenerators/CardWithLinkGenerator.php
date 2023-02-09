@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\m3_page_builder\DemoGenerators;
+namespace Drupal\pb_devel_generate\DemoGenerators;
 
-use Drupal\m3_page_builder\DemoGeneratorInterface;
-use Drupal\m3_page_builder\GeneratorHelpers\LayoutNodeHelper;
-use Drupal\m3_page_builder\GeneratorHelpers\MediaHelper;
-use Drupal\m3_page_builder\GeneratorHelpers\ParagraphsHelper;
+use Drupal\pb_devel_generate\DemoGeneratorInterface;
+use Drupal\pb_devel_generate\GeneratorHelpers\LayoutNodeHelper;
+use Drupal\pb_devel_generate\GeneratorHelpers\MediaHelper;
+use Drupal\pb_devel_generate\GeneratorHelpers\ParagraphsHelper;
 use Drupal\Component\Utility\Random;
 
 class CardWithLinkGenerator implements DemoGeneratorInterface {
@@ -14,13 +14,8 @@ class CardWithLinkGenerator implements DemoGeneratorInterface {
    */
   public static function generate($variation, $values) {
     $random = new Random();
-    $target_field = $values['pages_target_field'];
-    $page = LayoutNodeHelper::createNodeWithLayoutVariation('page',  $target_field, 'Cards with Link - ', $variation);
-
-    $page->set('field_content_brief', $random->sentences(4));
-    $preview_image_media = MediaHelper::createMediaImage();
-    $page->field_preview_image->target_id = $preview_image_media->id();
-    $page->save();
+    $target_field = $values['target_field'];
+    $page = LayoutNodeHelper::createNodeWithLayoutVariation('pb_page',  $target_field, 'Card with Link - ', $variation);
 
     // Create a few card preview images to be selected at random
     $preview_images = [];
@@ -38,15 +33,17 @@ class CardWithLinkGenerator implements DemoGeneratorInterface {
       $paragraph_regions = $paragraph_layout_definition->getRegions();
       $paragraph_uuid = $layout_paragraph->uuid->value;
 
-      $card_styles = ['minimal', 'regular', 'large', 'horizontal'];
+      // These values must match the ones available in the field_pb_card_style
+      // field of the pb_card_with_link paragraph
+      $card_styles = ['title_only', 'image_title', 'full', 'full_horizontal'];
       foreach($paragraph_regions as $region_name => $region_label) {
         // If region is prefix, just add a heading
-        if($region_name == 'prefix') {
-          $paragraph_code = "$paragraph_layout_name--{$paragraph_behavior_settings['layout_paragraphs']['config']['additional']['classes']['custom_style']}";
+        if($region_name == 'header') {
+          $paragraph_code = "$paragraph_layout_name--{$paragraph_behavior_settings['layout_paragraphs']['config']['additional']['classes']['color_scheme']}";
           $content_paragraphs[] = ParagraphsHelper::createHeadingParagraph($region_name, $paragraph_uuid, $paragraph_code, $paragraph_code);
         }
 
-        else if(substr($region_name, 0, 6) == 'column') {
+        else if(strpos($region_name, 'column') !== false) {
           // If region is a column, populate with cards in all styles
           $title = $random->sentences(2);
           $brief = $random->sentences(16);
@@ -71,20 +68,13 @@ class CardWithLinkGenerator implements DemoGeneratorInterface {
     }
 
     foreach($content_paragraphs as $para) {
-      // HACK ALERT: hardcoded filtering of compatible paragraph types
-      // TODO: programmatically exclude the paragraph types that are not compatible with the field definition
-      // and move all this code that repeats in every generator to a base implementation
-      $para_is_heading = $para->type->target_id == 'content_heading';
-      $field_is_intro = $target_field == 'field_intro';
-      if(!($para_is_heading && $field_is_intro)) {
-        $field_content[] = [
-          'target_id' => $para->id(),
-          'target_revision_id' => $para->getRevisionId()
-        ];
-      }
+      $field_content[] = [
+        'target_id' => $para->id(),
+        'target_revision_id' => $para->getRevisionId()
+      ];
     }
 
-    $target_field = $values['pages_target_field'];
+    $target_field = $values['target_field'];
     $page->set($target_field, $field_content);
     $page->save();
 

@@ -61,13 +61,13 @@ class ParagraphsHelper {
   }
 
   public static function createCardWithLinkParagraph($region, $parent_uuid, $title, $brief, $preview_image, $style) {
-    $paragraph = static::createBaseParagraph('content_card_with_link', $region, $parent_uuid);
+    $paragraph = static::createBaseParagraph('pb_card_with_link', $region, $parent_uuid);
 
-    $paragraph->set('field_card_brief', $brief);
-    $paragraph->set('field_card_title', $title);
-    $paragraph->set('field_card_preview', $preview_image->id());
-    $paragraph->set('field_card_style', $style);
-    $paragraph->set('field_linked_content', 'https://www.matrushka.com.mx');
+    $paragraph->set('field_pb_abstract', $brief);
+    $paragraph->set('field_pb_title', $title);
+    $paragraph->set('field_pb_preview_image', $preview_image->id());
+    $paragraph->set('field_pb_card_style', $style);
+    $paragraph->set('field_pb_link_target', 'https://www.matrushka.com.mx');
 
     $paragraph->save();
     return $paragraph;
