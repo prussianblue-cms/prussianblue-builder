@@ -23,7 +23,7 @@ function pb_devel_generate_pb_get_demo_generators() {
     ],
     'pb_devel_generate--pb_embed_url' => [
       'label' => t('Embed URL'),
-      'class' => \Drupal\pb_devel_generate\DemoGenerators\UrlEmbedGenerator::class
+      'class' => \Drupal\pb_devel_generate\DemoGenerators\EmbedUrlGenerator::class
     ],
     'pb_devel_generate--pb_logo_strip' => [
       'label' => t('Logo Strip'),
