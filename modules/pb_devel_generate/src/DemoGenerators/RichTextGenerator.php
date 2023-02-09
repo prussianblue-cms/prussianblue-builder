@@ -45,15 +45,15 @@ class RichTextGenerator implements DemoGeneratorInterface {
 
       foreach($paragraph_regions as $region_name => $region_label) {
         $populate_with = $population_distribution[$region_name];
-        // switch($populate_with) {
-        //   case 'heading':
-        //     $paragraph_code = "$paragraph_layout_name--{$paragraph_behavior_settings['layout_paragraphs']['config']['additional']['classes']['color_scheme']}";
-        //     $content_paragraphs[] = ParagraphsHelper::createHeadingParagraph($region_name, $paragraph_uuid, $paragraph_code, $paragraph_code);
-        //     break;
-        //   case 'rich-text':
-        //     $content_paragraphs[] = ParagraphsHelper::createTextParagraph($region_name, $paragraph_uuid, $text_styles_demo_content);
-        //     break;
-        // }
+        switch($populate_with) {
+          case 'heading':
+            $paragraph_code = "$paragraph_layout_name--{$paragraph_behavior_settings['layout_paragraphs']['config']['additional']['classes']['color_scheme']}";
+            $content_paragraphs[] = ParagraphsHelper::createHeadingParagraph($region_name, $paragraph_uuid, $paragraph_code, $paragraph_code);
+            break;
+          case 'rich-text':
+            $content_paragraphs[] = ParagraphsHelper::createTextParagraph($region_name, $paragraph_uuid, $text_styles_demo_content);
+            break;
+        }
       }
     }
 

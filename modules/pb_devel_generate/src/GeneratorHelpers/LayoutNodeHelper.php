@@ -121,12 +121,15 @@ class LayoutNodeHelper {
            'classes' => [
              'width' => 'layout--' . $width,
              'color_scheme' => 'layout--' . $color_scheme,
-             'balance' => 'layout--' . $balance,
            ],
          ],
        ],
      ],
    ];
+
+   if($balance) {
+     $behavior['layout_paragraphs']['config']['additional']['classes']['balance'] = 'layout--' . $balance;
+   }
 
    return $behavior;
   }

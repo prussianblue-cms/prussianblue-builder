@@ -4,7 +4,7 @@
  * @file ParagraphsHelper class
  * Provides functions to create content paragraphs
  */
-namespace Drupal\m3_page_builder\GeneratorHelpers;
+namespace Drupal\pb_devel_generate\GeneratorHelpers;
 
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\devel_generate\DevelGenerateBase;
@@ -37,23 +37,23 @@ class ParagraphsHelper {
   }
 
   public static function createHeadingParagraph($region, $parent_uuid, $code, $label) {
-    $paragraph = static::createBaseParagraph('content_heading', $region, $parent_uuid);
-    $paragraph->set('field_content_heading_code', $code);
-    $paragraph->set('field_content_heading_label', $label);
+    $paragraph = static::createBaseParagraph('pb_heading', $region, $parent_uuid);
+    $paragraph->set('field_pb_identifier', $code);
+    $paragraph->set('field_pb_title', $label);
 
     $paragraph->save();
     return $paragraph;
   }
 
   public static function createTextParagraph($region, $parent_uuid, $content=null) {
-    $paragraph = static::createBaseParagraph('content_item', $region, $parent_uuid);
+    $paragraph = static::createBaseParagraph('pb_rich_text', $region, $parent_uuid);
 
     if(is_null($content)) {
       DevelGenerateBase::populateFields($paragraph);
     }
     else {
-      $paragraph->field_content_item_column->value = $content;
-      $paragraph->field_content_item_column->format = 'formatted_text';
+      $paragraph->field_pb_formatted_text->value = $content;
+      $paragraph->field_pb_formatted_text->format = 'basic_html';
     }
 
     $paragraph->save();
