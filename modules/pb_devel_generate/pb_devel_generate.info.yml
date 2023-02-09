@@ -1,0 +1,10 @@
+name: 'PrussianBlue Devel Generate Plugin'
+type: module
+description: 'Generates demo content for the PrussianBlueCMS. Useful to test layout and paragraph styles and behavior.'
+core: 9.x
+core_version_requirement: ^9 || ^10
+
+dependencies:
+  - pb_layouts
+  - pb_base_paragraphs
+  - devel_generate

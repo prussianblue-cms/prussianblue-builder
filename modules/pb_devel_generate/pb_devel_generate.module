@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_pb_get_demo_generators()
+ */
+function pb_devel_generate_pb_get_demo_generators() {
+  return [
+    'pb_devel_generate--pb_rich_text' => [
+      'label' => 'Rich Text',
+      'class' => \Drupal\pb_devel_generate\DemoGenerators\RichTextGenerator::class
+    ],
+    'pb_devel_generate--pb_card_with_link' => [
+      'label' => t('Card with Link'),
+      'class' => \Drupal\pb_devel_generate\DemoGenerators\CardWithLinkGenerator::class
+    ],
+    'pb_devel_generate--pb_image' => [
+      'label' => t('Image'),
+      'class' => \Drupal\pb_devel_generate\DemoGenerators\ImageGenerator::class
+    ],
+    'pb_devel_generate--pb_video' => [
+      'label' => t('Video'),
+      'class' => \Drupal\pb_devel_generate\DemoGenerators\VideoGenerator::class
+    ],
+    'pb_devel_generate--pb_embed_url' => [
+      'label' => t('Embed URL'),
+      'class' => \Drupal\pb_devel_generate\DemoGenerators\UrlEmbedGenerator::class
+    ],
+    'pb_devel_generate--pb_logo_strip' => [
+      'label' => t('Logo Strip'),
+      'class' => \Drupal\pb_devel_generate\DemoGenerators\LogoStripGenerator::class
+    ],
+    'pb_devel_generate--background_tests' => [
+      'label' => t('Background Image Tests'),
+      'class' => \Drupal\pb_devel_generate\DemoGenerators\BackgroundTestsGenerator::class
+    ],
+  ];
+}
