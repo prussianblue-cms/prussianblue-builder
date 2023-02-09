@@ -106,19 +106,19 @@ class ParagraphsHelper {
     return $paragraph;
   }
 
-  // /**
-  //  * Creates an URL embed paragraph for the given url
-  //  * @param string $url
-  //  */
-  // public static function createUrlEmbedParagraphFromUrl($region, $parent_uuid, $url) {
-  //   $paragraph = static::createBaseParagraph('content_embed_url', $region, $parent_uuid);
-  //   $paragraph->set('field_embedded_url', $url);
-  //   $paragraph->save();
-  //   return $paragraph;
-  // }
+  /**
+   * Creates an embed url paragraph for the given url
+   * @param string $url
+   */
+  public static function createEmbedUrlParagraph($region, $parent_uuid, $url) {
+    $paragraph = static::createBaseParagraph('pb_embed_url', $region, $parent_uuid);
+    $paragraph->set('field_pb_link_target', $url);
+    $paragraph->save();
+    return $paragraph;
+  }
 
   /**
-   * Creates a Logo Carousel paragraph
+   * Creates a Logo Strip paragraph
    * @param array $images
    *    An array of image paragraphs to be used as logos. If ommitted, a random image set will be created
    */
