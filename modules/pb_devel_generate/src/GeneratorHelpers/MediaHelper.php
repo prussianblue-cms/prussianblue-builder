@@ -5,7 +5,7 @@
  *  Provides functions to create media items to be used in M3 content generators
  **/
 
-namespace Drupal\m3_page_builder\GeneratorHelpers;
+namespace Drupal\pb_devel_generate\GeneratorHelpers;
 
 use Drupal\Component\Utility\Random;
 use Drupal\devel_generate\DevelGenerateBase;
@@ -20,6 +20,7 @@ class MediaHelper {
   public static function createMediaImageWithResolution($min_resolution, $max_resolution) {
     $random = new Random();
     $file_system = \Drupal::service('file_system');
+    $file_repository = \Drupal::service('file.repository');
     $media_image = static::createMedia('image');
 
     $image_name = "between-$min_resolution-and-$max_resolution";
@@ -31,7 +32,7 @@ class MediaHelper {
     $random->image($file_path, $min_resolution, $max_resolution);
 
     $image_data = file_get_contents($file_path);
-    $file = file_save_data($image_data, $container_directory.$filename);
+    $file = $file_repository->writeData($image_data, $container_directory.$filename);
     $media_image->set('field_media_image', $file->id());
 
     $media_image->set('name', $image_name);
@@ -48,6 +49,7 @@ class MediaHelper {
    */
   public static function createMediaImageFromUrl($image_url, $filename, $name=null) {
     $file_system = \Drupal::service('file_system');
+    $file_repository = \Drupal::service('file.repository');
     $media_image = static::createMedia('image');
 
     // Create a new image file with the given URL
@@ -57,7 +59,7 @@ class MediaHelper {
     $image_data = file_get_contents($image_url);
     $container_directory = 'public://test-media-images/';
     $file_system->prepareDirectory($container_directory, FileSystemInterface::CREATE_DIRECTORY || FileSystemInterface::MODIFY_PERMISSIONS);
-    $file = file_save_data($image_data, $container_directory.$filename);
+    $file = $file_repository->writeData($image_data, $container_directory.$filename);
     $media_image->set('field_media_image', $file->id());
 
     if($name) {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\m3_page_builder\DemoGenerators;
+namespace Drupal\pb_devel_generate\DemoGenerators;
 
-use Drupal\m3_page_builder\DemoGeneratorInterface;
-use Drupal\m3_page_builder\GeneratorHelpers\LayoutNodeHelper;
-use Drupal\m3_page_builder\GeneratorHelpers\MediaHelper;
-use Drupal\m3_page_builder\GeneratorHelpers\ParagraphsHelper;
+use Drupal\pb_devel_generate\DemoGeneratorInterface;
+use Drupal\pb_devel_generate\GeneratorHelpers\LayoutNodeHelper;
+use Drupal\pb_devel_generate\GeneratorHelpers\MediaHelper;
+use Drupal\pb_devel_generate\GeneratorHelpers\ParagraphsHelper;
 use Drupal\Component\Utility\Random;
 
 class BackgroundTestsGenerator implements DemoGeneratorInterface {
@@ -14,7 +14,7 @@ class BackgroundTestsGenerator implements DemoGeneratorInterface {
    * {@inheritdoc}
    */
   public static function generate($variation, $values) {
-    $target_field = $values['pages_target_field'];
+    $target_field = $values['target_field'];
 
     $test_image_sizes = [
       '400x800',
@@ -27,7 +27,7 @@ class BackgroundTestsGenerator implements DemoGeneratorInterface {
     foreach($test_image_sizes as $test_size) {
       $test_image = MediaHelper::createMediaImageWithResolution($test_size, $test_size) ;
 
-      $page = TextStylesGenerator::generate($variation, $values);
+      $page = RichTextGenerator::generate($variation, $values);
       $page->title->value = $page->title->value . ' background: ' . $test_size;
       $page->save();
 
@@ -35,8 +35,8 @@ class BackgroundTestsGenerator implements DemoGeneratorInterface {
         $paragraph = $field_item->entity;
         $paragraph_type = $paragraph->type->target_id;
 
-        if($paragraph_type == 'content_layout') {
-          $paragraph->set('field_background_image', $test_image->id());
+        if($paragraph_type == 'pb_layout') {
+          $paragraph->set('field_pb_image', $test_image->id());
           $paragraph->save();
         }
       }
