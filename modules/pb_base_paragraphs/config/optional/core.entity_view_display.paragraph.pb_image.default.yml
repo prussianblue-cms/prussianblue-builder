@@ -4,7 +4,10 @@ dependencies:
   config:
     - field.field.paragraph.pb_image.field_pb_alt_text
     - field.field.paragraph.pb_image.field_pb_image
+    - field.field.paragraph.pb_image.field_pb_link_target
     - paragraphs.paragraphs_type.pb_image
+  module:
+    - link
 id: paragraph.pb_image.default
 targetEntityType: paragraph
 bundle: pb_image
@@ -26,5 +29,17 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_pb_link_target:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden: {  }

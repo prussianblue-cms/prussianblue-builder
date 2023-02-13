@@ -63,6 +63,7 @@ class ImageGenerator implements DemoGeneratorInterface {
           case 'images':
             foreach($test_images as $test_image) {
               $content_paragraphs[] = ParagraphsHelper::createImageParagraphFromMediaEntity($region_name, $paragraph_uuid, $test_image);
+              $content_paragraphs[] = ParagraphsHelper::createImageParagraphFromMediaEntity($region_name, $paragraph_uuid, $test_image, 'https://github.com/prussianblue-cms');
             }
             break;
         }

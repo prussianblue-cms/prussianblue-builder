@@ -85,13 +85,14 @@ class ParagraphsHelper {
   /**
    * Creates an image paragraph from a given media image entity
    */
-  public static function createImageParagraphFromMediaEntity($region, $parent_uuid, $media_image) {
+  public static function createImageParagraphFromMediaEntity($region, $parent_uuid, $media_image, $link_target=null) {
     $random = new Random();
     $paragraph = static::createBaseParagraph('pb_image', $region, $parent_uuid);
 
     $paragraph->set('field_pb_image', $media_image->id());
-    // TODO: populate the link target field
-    // $paragraph->set('field_pb_link_target', 'http://www.matrushka.com.mx');
+    if($link_target) {
+      $paragraph->set('field_pb_link_target', $link_target);
+    }
     $paragraph->set('field_pb_alt_text', $random->sentences(4));
     $paragraph->save();
 
