@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.pb_video.field_pb_video
+    - paragraphs.paragraphs_type.pb_video
+id: paragraph.pb_video.preview
+targetEntityType: paragraph
+bundle: pb_video
+mode: preview
+content:
+  field_pb_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.pb_logo_strip.field_pb_logo_strip_style
+    - field.field.paragraph.pb_logo_strip.field_pb_logos
+    - paragraphs.paragraphs_type.pb_logo_strip
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.pb_logo_strip.preview
+targetEntityType: paragraph
+bundle: pb_logo_strip
+mode: preview
+content:
+  field_pb_logo_strip_style:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pb_logos:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

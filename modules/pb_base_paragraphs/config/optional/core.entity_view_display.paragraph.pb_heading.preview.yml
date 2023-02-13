@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.pb_heading.field_pb_identifier
+    - field.field.paragraph.pb_heading.field_pb_title
+    - paragraphs.paragraphs_type.pb_heading
+id: paragraph.pb_heading.preview
+targetEntityType: paragraph
+bundle: pb_heading
+mode: preview
+content:
+  field_pb_identifier:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_pb_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
