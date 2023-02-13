@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.pb_card_with_link.field_pb_abstract
+    - field.field.paragraph.pb_card_with_link.field_pb_card_style
+    - field.field.paragraph.pb_card_with_link.field_pb_link_target
+    - field.field.paragraph.pb_card_with_link.field_pb_preview_image
+    - field.field.paragraph.pb_card_with_link.field_pb_title
+    - paragraphs.paragraphs_type.pb_card_with_link
+  module:
+    - link
+    - options
+id: paragraph.pb_card_with_link.preview
+targetEntityType: paragraph
+bundle: pb_card_with_link
+mode: preview
+content:
+  field_pb_abstract:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_pb_card_style:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_pb_link_target:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pb_preview_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_pb_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
