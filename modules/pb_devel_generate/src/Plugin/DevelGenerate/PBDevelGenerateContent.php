@@ -22,7 +22,7 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
  * )
  */
 
-class PBDevelGenerate extends DevelGenerateBase implements ContainerFactoryPluginInterface {
+class PBDevelGenerateContent extends DevelGenerateBase implements ContainerFactoryPluginInterface {
 
   /**
    * The Messenger service

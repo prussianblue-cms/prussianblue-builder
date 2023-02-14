@@ -1,0 +1,5 @@
+services:
+  pb_menus.commands:
+    class: \Drupal\pb_menus\Commands\MenuCommands
+    tags:
+      - { name: drush.command }

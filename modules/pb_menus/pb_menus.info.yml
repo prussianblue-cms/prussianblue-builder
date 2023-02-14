@@ -1,0 +1,5 @@
+name: 'PrussianBlue menus'
+type: module
+description: 'Provides configuration and helper commands to create and populate menus.'
+core: 9.x
+core_version_requirement: ^9 || ^10
